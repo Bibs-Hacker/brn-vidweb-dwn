@@ -58,6 +58,10 @@ function safeHttpsUrl(raw) {
   return url;
 }
 
+app.get("/", (_req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 app.get("/api/health", (_req, res) => res.json({ ok: true, service: "Dev Brian Video Downloader" }));
 
 app.post("/api/resolve", async (req, res) => {
