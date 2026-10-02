@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="Dev Brian Video Downloader — a TEAM NASA project for saving videos you have permission to download.">
+  <title>Dev Brian Video Downloader | TEAM NASA</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Dev Brian Video Downloader home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.8v14.4L19 12 7 4.8Z"/></svg></span>
+      <span><strong>DEV BRIAN</strong><small>VIDEO DOWNLOADER</small></span>
+    </a>
+    <span class="team-tag"><span class="status-dot"></span> TEAM NASA PROJECT</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> ONE LINK. ONE WORKSPACE.</div>
+      <h1>Your videos.<br><span>One destination.</span></h1>
+      <p class="hero-copy">Paste a supported video link, check the available download options, and save permitted content to your device.</p>
+      <div class="platforms" aria-label="Supported link types">
+        <span class="platform-chip"><span class="platform-icon tiktok">♪</span> TikTok</span>
+        <span class="platform-chip"><span class="platform-icon instagram">◎</span> Instagram</span>
+        <span class="platform-chip"><span class="platform-icon facebook">f</span> Facebook</span>
+      </div>
+    </section>
+
+    <section class="download-card" aria-labelledby="download-title">
+      <div class="card-heading">
+        <div><div class="step-label">VIDEO LINK</div><h2 id="download-title">Paste your link</h2></div>
+        <span class="secure-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3m-11 0h12v10H6V10Z"/></svg> Private by design</span>
+      </div>
+      <form id="download-form">
+        <label class="sr-only" for="video-url">Video URL</label>
+        <div class="input-wrap">
+          <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13.5a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1.7 1.7M14 10.5a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 12 19.2l1.7-1.7"/></svg>
+          <input id="video-url" name="url" type="url" placeholder="Paste TikTok, Instagram, Facebook or direct video URL…" autocomplete="url" required maxlength="2048">
+          <button type="button" id="paste-btn" class="paste-btn">Paste</button>
+        </div>
+        <label class="consent"><input type="checkbox" id="rights-confirm" required><span>I own this video or have permission to download and save it.</span></label>
+        <button class="primary-btn" id="resolve-btn" type="submit"><span class="btn-text">Find video</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+      </form>
+      <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+      <section id="result" class="result" hidden aria-live="polite"></section>
+      <div class="card-foot"><span class="foot-lock"></span> We don't ask for your social media passwords.</div>
+    </section>
+
+    <section class="how-section">
+      <div class="section-kicker">SIMPLE BY DESIGN</div>
+      <h2>From link to saved.</h2>
+      <div class="steps">
+        <article class="step"><span class="step-number">01</span><h3>Copy a link</h3><p>Copy the post URL from the app or website.</p></article>
+        <article class="step"><span class="step-number">02</span><h3>Check availability</h3><p>We identify the link and show supported download options.</p></article>
+        <article class="step"><span class="step-number">03</span><h3>Save to device</h3><p>Download an available file using your browser.</p></article>
+      </div>
+    </section>
+
+    <section class="notice"><div class="notice-icon">i</div><p><strong>Respect creators.</strong> Download only videos you own or have permission to save. Private, restricted, or protected content is not supported. Platform links need an authorized provider integration; use each platform’s built-in download option when available.</p></section>
+  </main>
+  <footer><span>© <span id="year"></span> Dev Brian</span><span>BUILT WITH PURPOSE <b>·</b> TEAM NASA</span></footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
